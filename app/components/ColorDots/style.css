@@ -1,0 +1,33 @@
+
+.es-colors{
+display: flex;
+gap: 12px;
+margin-top: 30px;
+}
+
+.es-color{
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+   
+
+
+}
+.es-color-1{
+    background: #000000;
+    border: 1px solid var(--Color-Border-medium, #00000054)
+}
+.es-color-2{
+    background: #F0E68C;
+    border: 1px solid var(--Color-Border-medium, #00000054)
+}
+.es-color-3{
+    background: #B0C4DE;
+    border: 1px solid var(--Color-Border-medium, #00000054)
+}
+.es-color-4{
+    background: #EFD9F4;
+    border: 1px solid var(--Color-Border-medium, #00000054)
+
+}
+

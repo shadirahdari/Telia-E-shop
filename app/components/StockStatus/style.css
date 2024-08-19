@@ -1,0 +1,21 @@
+.es-stock-status{
+    width: 343px;
+    height: 40px;
+    padding: 10px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    border-top: 1px solid var(--Color-Border-weak, #00000029)
+} 
+
+.es-in-stock{
+    color: var(--Color-Text-Status-success-strong, #02562B);
+
+}
+.es-not-in-stock{
+    color: var(--Color-Text-Status-error-strong, #980233);
+
+}

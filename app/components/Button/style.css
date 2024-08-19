@@ -1,0 +1,7 @@
+.es-button{
+    background: var(--Color-Background-Interactive-primary, #4E0174);
+    color: var(--Color-Text-Interactive-on-primary, #FFFFFF);
+    width: 150px;
+    height: 48px;
+    border-radius: 100px;
+}
