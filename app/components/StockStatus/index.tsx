@@ -1,7 +1,7 @@
 import "./style.css";
 
-export const StockStatus = ({ in_stock = false }) => {
-  if (in_stock)
+export const StockStatus = ({ inStock = false }) => {
+  if (inStock)
     return (
       <div className="es-stock-status es-in-stock">
         
