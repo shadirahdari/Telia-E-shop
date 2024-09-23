@@ -1,0 +1,50 @@
+.header {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: left;
+  height: 35px;
+}
+.leadText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  height: 48px;
+}
+
+.custom-submit-btn {
+  height: 48px;
+  padding: 16px 24px;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: #29003e;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.custom-input {
+  border: 1px solid #7a7a7a;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+}
+
+.error-message.invalid-feedback{
+  align-items: center;
+  display: flex;
+  gap: 2px;
+}

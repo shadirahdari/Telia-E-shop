@@ -5,9 +5,10 @@ import { PhonesList } from "./PhonesList";
 export default function Home() {
   return (
     <div>
-      {/* <ProductCard />
-      <Form /> */}
-      <PhonesList />
+      {/* <ProductCard />}
+       */}
+      {/* <PhonesList /> */}
+      <Form />
     </div>
   );
 }
