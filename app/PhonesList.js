@@ -6,6 +6,7 @@ import { ProductCard } from "./components/ProductCard";
 
 export function PhonesList() {
   const [phones, setPhones] = useState([]);
+  const brand = new URLSearchParams(window.location.search).get("brand");
 
   useEffect(() => {
     axios
@@ -22,9 +23,12 @@ export function PhonesList() {
     <div>
       <h1>Phone Listings</h1>
       <div className="phone-list">
-        {phones.map((phone, index) => (
-          <ProductCard key={index} phone={phone} />
-        ))}
+        {phones.map(
+          (phone, index) =>
+            (!brand || phone.company === brand) && (
+              <ProductCard key={index} phone={phone} />
+            )
+        )}
       </div>
     </div>
   );

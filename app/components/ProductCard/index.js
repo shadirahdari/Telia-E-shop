@@ -1,3 +1,7 @@
+"use client"; // You must add this for client components
+
+// import { useRouter } from "next/navigation";
+
 import { Button } from "../Button";
 import { MonthlyPayment } from "../MonthlyPayment";
 import { StockStatus } from "../StockStatus";
@@ -9,12 +13,15 @@ import "./style.css";
 import axios from "axios";
 
 export const ProductCard = ({ phone }) => {
+  // const router = useRouter();
+
   const handleAddToCard = () => {
     axios
       .post("/api/add-to-cart", { phoneId: phone.id })
       .then((response) => {
         console.log(response.data.message); // Phone added to cart
         console.log("Updated Cart:", response.data.cart); // Display the updated cart
+        // router.push("/finish");
       })
       .catch((error) => {
         console.error(
