@@ -1,7 +1,81 @@
-.es-button{
-    background: var(--Color-Background-Interactive-primary, #4E0174);
-    color: var(--Color-Text-Interactive-on-primary, #FFFFFF);
+/* Button Styles */
+.button {
+    border-radius: 4px; /* Adjust as needed */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+  }
+  
+  /* Size Styles */
+  .custom-filter-class {
+    width: 100%;
+    max-width: 200px; /* Adjust max-width as needed */
+  }
+  
+  .custom-see-results-class {
     width: 150px;
-    height: 48px;
-    border-radius: 100px;
-}
+  }
+  
+  .custom-most-popular-class {
+    width: auto;
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+  
+  .custom-order-class {
+    width: 150px;
+  }
+  
+  .custom-form-class {
+    width: 100%;
+    padding: 12px; /* Adjust padding as needed */
+  }
+  
+  .custom-filters-close-class {
+    width: 100%;
+    height: 48px; /* Adjust height as needed */
+  }
+  
+  .custom-filters-results-class {
+    width: 100%;
+    margin-right: 10px; /* Adjust margin as needed */
+  }
+  
+  /* Color Styles */
+  .custom-bright-outlined-class {
+    border: 2px solid #ff9800; /* Change color */
+    color: #ff9800; /* Change text color */
+  }
+  
+  .custom-regular-class {
+    padding: 12px; /* Adjust padding */
+    color: #ffffff; /* Change text color */
+    background-color: #3f51b5; /* Change background color */
+  }
+  
+  .custom-dark-class {
+    color: #ffffff; /* Change text color */
+    background-color: #212121; /* Change background color */
+    border: none;
+  }
+  
+  .custom-dark-outlined-class {
+    border: 2px solid #212121; /* Change border color */
+    color: #212121; /* Change text color */
+  }
+  
+  /* Hover Effects */
+  .button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Change as needed */
+  }
+  
+  .custom-bright-outlined-class:hover {
+    background-color: rgba(255, 152, 0, 0.1); /* Change as needed */
+  }
+  
+  .custom-regular-class:hover {
+    background-color: rgba(63, 81, 181, 0.8); /* Change as needed */
+  }
+  
+  .custom-dark-outlined-class:hover {
+    background-color: rgba(33, 33, 33, 0.1); /* Change as needed */
+  }
+  

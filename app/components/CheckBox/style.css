@@ -1,0 +1,31 @@
+.custom-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    margin-right: 8px;
+  }
+  
+  .custom-checkbox.checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+  }
+  
+  .custom-checkbox .check-icon {
+    fill: white;
+    width: 16px;
+    height: 16px;
+  }
+  

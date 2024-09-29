@@ -1,24 +1,38 @@
-"use client"; // You must add this for client components
+"use client"; // You must add this for client components 
 
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+
+// Importing the ChangeEvent type from React
+import { ChangeEvent } from "react";
 
 const ProductFilterPage = () => {
   const router = useRouter();
 
   const [brand, setBrand] = useState("Apple");
-  const [price, setPrice] = useState([0, 1000]);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(1000);
 
-  const handleBrandChange = (e) => setBrand(e.target.value);
-  const handlePriceChange = (e) => setPrice([e.target.min, e.target.max]);
+  const handleBrandChange = (e: ChangeEvent<HTMLSelectElement>) => setBrand(e.target.value);
+  
+  const handlePriceChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = Number(e.target.value);
+    if (e.target.name === "min") {
+      setMinPrice(value);
+    } else {
+      setMaxPrice(value);
+    }
+  };
 
   const handleApply = () => {
-    // Add logic to filter products based on brand, price, etc.
-    console.log(`Filtering by: Brand: ${brand}, Price: ${price}`);
-    router.push(`/?brand=${brand}`);
+    console.log(`Filtering by: Brand: ${brand}, Price: ${minPrice} - ${maxPrice}`);
+    router.push(`/?brand=${brand}&minPrice=${minPrice}&maxPrice=${maxPrice}`);
   };
 
   const handleClear = () => {
+    setBrand("Apple");
+    setMinPrice(0);
+    setMaxPrice(1000);
     router.push(`/`);
   };
 
@@ -38,13 +52,26 @@ const ProductFilterPage = () => {
 
         <div className="filter-option">
           <label>Price Range</label>
-          <input
-            type="range"
-            min="0"
-            max="1000"
-            value={price}
-            onChange={handlePriceChange}
-          />
+          <div>
+            <label>Min: </label>
+            <input
+              type="number"
+              name="min"
+              min="0"
+              max={maxPrice}
+              value={minPrice}
+              onChange={handlePriceChange}
+            />
+            <label>Max: </label>
+            <input
+              type="number"
+              name="max"
+              min={minPrice}
+              max="1000"
+              value={maxPrice}
+              onChange={handlePriceChange}
+            />
+          </div>
         </div>
 
         <button type="button" onClick={handleApply}>
